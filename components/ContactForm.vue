@@ -1,7 +1,7 @@
 <template>
-  <v-form v-model="valid" method="post" action="mailto:mparry92@gmail.com" id="nativeForm">
+  <v-form v-model="valid" method="POST" action="send_mail.php" id="nativeForm">
     <v-container>
-      <v-layout>
+      <v-layout row wrap>
         <v-flex
           xs12
           md12
@@ -38,7 +38,10 @@
             label="E-mail"
             required
           ></v-text-field>
-          <v-btn @click="submit" :disabled="!valid">submit</v-btn>
+          <v-textarea
+            placeholder="Enter Message Here"
+           />
+          <v-btn type="submit" :disabled="!valid">submit</v-btn>
         </v-flex>
       </v-layout>
     </v-container>

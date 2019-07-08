@@ -43,6 +43,7 @@
      <h2 class="text-xs-center">Read What Our Customers Have To Say</h2>
      </div>
     <Quotes />
+    <ContactForm />
     </v-flex>
   </v-layout>
 </v-container>
@@ -58,6 +59,7 @@ import CardTwoColsImgRight from '~/components/CardTwoColsImgRight.vue'
 import Carousel from '~/components/Carousel.vue'
 import Hero from '~/components/Hero.vue'
 import Quotes from '~/components/Quotes.vue'
+import ContactForm from '~/components/ContactForm.vue'
 export default {
   data() {
     return {
@@ -115,7 +117,8 @@ export default {
     CardTwoColsImgRight,
     Carousel,
     Hero,
-    Quotes
+    Quotes,
+    ContactForm
   }
 }
 </script>
