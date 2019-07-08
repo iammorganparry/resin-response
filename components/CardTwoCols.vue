@@ -1,19 +1,7 @@
 <template>
   <div>
- <v-card flat>
-    <v-layout>
-      <v-flex
-      xs12
-      md4
-      lg4
-      >
-        <v-img :src="data.imgSrc"/>
-      </v-flex>
-      <v-flex
-      xs12
-      md8
-      lg8
-      >
+      <v-card max-height="450">
+        <v-img max-height="250" min-height="250" :src="data.imgSrc"/>
         <v-card-title class="headline">
           {{data.title}}
         </v-card-title>
@@ -25,7 +13,7 @@
           {{data.paragraph}}
           </p>
         </v-card-text>
-        <v-card-actions>
+        <!-- <v-card-actions>
           <v-spacer />
           <v-btn
             color="primary"
@@ -35,9 +23,7 @@
           >
             {{data.button.text}}
           </v-btn>
-        </v-card-actions>
-      </v-flex>
-    </v-layout>
+        </v-card-actions> -->
       </v-card>
   </div>
 </template>

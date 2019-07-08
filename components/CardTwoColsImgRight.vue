@@ -1,6 +1,6 @@
 <template>
   <div>
- <v-card flat>
+ <v-card>
     <v-layout>
       <v-flex
       xs12

@@ -10,8 +10,10 @@
       >
         <v-icon>menu</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title" />
       <v-spacer />
+      <v-toolbar-title>
+        CALL OUR TEAM ON: 01656713947
+      </v-toolbar-title>
        <v-btn
         icon
       >
@@ -26,9 +28,6 @@
     >
       <v-list>
           <v-list-tile v-for="(item, i) in items" :key="i">
-        <v-list-tile-action>
-          <v-icon>{{item.icon}}</v-icon>
-        </v-list-tile-action>
         <NuxtLink :to="item.to">
         <v-list-tile-title>{{item.title}}</v-list-tile-title>
         </NuxtLink>
@@ -36,22 +35,24 @@
       </v-list>
     </v-navigation-drawer>
     <v-content>
-      <v-container fluid>
+      <Header />
+      <!-- <v-container id="main"> -->
         <nuxt />
-      </v-container>
+      <!-- </v-container> -->
     </v-content>
     <v-footer
     app
     height="300"
     absolute
     >
-    <Footer :footer="footer" />
+    <Footer />
     </v-footer>
   </v-app>
 </template>
 
 <script>
 import Footer from '~/components/Footer.vue'
+import Header from '~/components/Header.vue'
 export default {
   data() {
     return {
@@ -71,13 +72,13 @@ export default {
         },
         {
           icon: 'bubble_chart',
-          title: 'Products',
-          to: '/products'
+          title: 'Why Switch?',
+          to: '/switch'
         },
         {
-          icon: 'bubble_chart',
-          title: 'Services',
-          to: '/services'
+          icon: 'camera_enhance',
+          title: 'Gallery',
+          to: '/gallery'
         },
         {
           icon: 'bubble_chart',
@@ -89,23 +90,16 @@ export default {
       left: true,
       rightDrawer: false,
       title: 'Resin Response',
-      footer: {
-        copy: 'Copyright Resin Response 2019 | Website by MJP Websites Solutions',
-        contact: {
-          title: 'Contact Us',
-          phone: '07449857222',
-          email: 'info@resinresponse.co.uk'
-        },
         services: {
           title: 'Our Services',
           resin: 'Resin Driveways',
           landscaping: 'Resin Landscaping'
         }
       }
-    }
-  },
+    },
    components: {
-    Footer
+    Footer,
+    Header
   }
 }
 </script>
@@ -115,4 +109,10 @@ a {
     text-decoration: none;
 }
 
+#main {
+  margin-top: 100px;
+}
+.application.theme--light {
+  background-color: white !important;
+}
 </style>

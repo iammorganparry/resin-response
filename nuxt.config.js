@@ -20,6 +20,11 @@ module.exports = {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
       }
     ]
   },
@@ -36,6 +41,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/vuetify.js'
   ],
   /*
   ** Nuxt.js modules
@@ -65,6 +71,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    vendor: ['vuetify'],
     extend(config, ctx) {
     }
   }

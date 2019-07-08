@@ -1,4 +1,7 @@
 <template>
+<div>
+<Hero />
+<v-container id="main">
   <v-layout
   >
     <v-flex
@@ -7,43 +10,43 @@
       md12
     >
       <div class="text-xs-center">
-    <v-carousel max="100%">
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-    ></v-carousel-item>
-  </v-carousel>
       </div>
-     <Card :data="about" />
      <div class="header-padding">
       <div style="width: 100%; height: 30px; border-bottom: 1px solid rgba(0,0,0,0.12); text-align: center">
-  <span  style="font-size: 40px; background-color: #fafafa; padding: 0 10px 0 10px;">
-    Our Services <!--Padding is optional-->
+  <span class="primary--text"  style="font-size: 40px; background-color: white; padding: 0 10px 0 10px;">
+    OUR SERVICES <!--Padding is optional-->
   </span>
 </div>
      </div>
+     <v-container grid-list-md>
+     <v-layout row wrap>
+      <v-flex xs12 md4 lg4>
      <div id="driveway-card">
      <CardTwoCols :data="products" />
      </div>
+      </v-flex>
+    <v-flex xs12 md4 lg4>
      <div id="landscape-card">
-     <CardTwoColsImgRight :data="services" />
-     </div>
-     <v-divider></v-divider>
-     <div class="header-padding">
-     <h1 class="text-xs-center">Dont Just Take Our Word For It!</h1>
-     <h2 class="text-xs-center">Read What Our Customers Have To Say</h2>
-     </div>
-     <div id="quotes">
-        <blockquote class="blockquote text-xs-center">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maiores modi quidem veniam, expedita quis laboriosam, ullam facere adipisci, iusto, voluptate sapiente corrupti asperiores rem nemo numquam fuga ab at."</blockquote>
-        <footer class="text-xs-right">
-          <small class="text-xs-right">
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
+     <CardTwoCols :data="services" />
      </div>
     </v-flex>
+    <v-flex xs12 md4 lg4>
+     <CardTwoCols :data="patios" />
+    </v-flex>
+     </v-layout>
+     </v-container>
+     <v-divider></v-divider>
+    <Carousel :items="items" />
+     <v-divider></v-divider>
+     <div class="header-padding">
+     <h1 class="primary--text text-xs-center">Dont Just Take Our Word For It!</h1>
+     <h2 class="text-xs-center">Read What Our Customers Have To Say</h2>
+     </div>
+    <Quotes />
+    </v-flex>
   </v-layout>
+</v-container>
+</div>
 </template>
 
 <script>
@@ -52,6 +55,9 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import Card from '~/components/Card.vue'
 import CardTwoCols from '~/components/CardTwoCols.vue'
 import CardTwoColsImgRight from '~/components/CardTwoColsImgRight.vue'
+import Carousel from '~/components/Carousel.vue'
+import Hero from '~/components/Hero.vue'
+import Quotes from '~/components/Quotes.vue'
 export default {
   data() {
     return {
@@ -69,35 +75,36 @@ export default {
           src: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/39748512_156856168549520_3251939182565654528_n.jpg?_nc_cat=100&_nc_oc=AQnbFNApRi_3FYyzXiqwiyBTVhfxRNzIACjnOrGqeN4ds4nPYXbegKdD2ers4av9DUtpLZ6d54BF_T9bNoV-LQsU&_nc_ht=scontent-lht6-1.xx&oh=ad00ab687a83f9518243f77415730d44&oe=5DC4B79C'
         }
       ],
-      about: {
-        title: 'Thank you for visiting Resin Response',
-        subtitle: 'Youre No.1 Choice For Driveways, Pathways & Patios',
-        paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac eros id lectus scelerisque blandit id ac lorem. Morbi iaculis, tellus ut ultricies pulvinar, ipsum urna euismod turpis, non dapibus dolor nisi a tellus. Morbi lacinia ipsum vitae imperdiet maximus. Proin vel odio dolor. Integer augue enim, pellentesque ut suscipit euismod, vehicula vel urna. Nulla at nisl id urna interdum scelerisque. Etiam pellentesque pulvinar ex et scelerisque.',
-        button: {
-          text: 'About Us',
-          to: '/about'
-        }
-      },
       products: {
         title: 'Driveways',
-        subtitle: 'We only use the best products to ensure a qaulity finish everytime!',
-        imgSrc: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/39748512_156856168549520_3251939182565654528_n.jpg?_nc_cat=100&_nc_oc=AQnbFNApRi_3FYyzXiqwiyBTVhfxRNzIACjnOrGqeN4ds4nPYXbegKdD2ers4av9DUtpLZ6d54BF_T9bNoV-LQsU&_nc_ht=scontent-lht6-1.xx&oh=ad00ab687a83f9518243f77415730d44&oe=5DC4B79C',
-        paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac eros id lectus scelerisque blandit id ac lorem. Morbi iaculis, tellus ut ultricies pulvinar, ipsum urna euismod turpis, non dapibus dolor nisi a tellus. Morbi lacinia ipsum vitae imperdiet maximus. Proin vel odio dolor. Integer augue enim, pellentesque ut suscipit euismod, vehicula vel urna. Nulla at nisl id urna interdum scelerisque. Etiam pellentesque pulvinar ex et scelerisque.',
+        subtitle: `Tired of your cracking driveway? With a resin bound driveway, you're guarenteed a smooth, long-lasting, puddle-free drivway for years to come! Oh.. and its SUDS compliant!`,
+        imgSrc: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/35416225_115127122722425_4219977128357134336_o.jpg?_nc_cat=103&_nc_oc=AQlGYZF4Rzow04MS569qLXh5bB0lLkG3lJauEfufamWFY2M7CQXpJ_lxJAqdKc8am02HY1CuCVFiYpxiahwb3FIA&_nc_ht=scontent-lht6-1.xx&oh=1da6c4b979d0f7d04a07fc952289cae7&oe=5DAD1269',
+        paragraph: '',
         button: {
           text: 'View Projects',
           to: '/products'
         }
       },
       services: {
-        title: 'Landscaping',
-        subtitle: 'We provide both residential and commercial services!',
-        imgSrc: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/58769504_297549484480187_4075725248652115968_n.jpg?_nc_cat=109&_nc_oc=AQnx77bJnJarVO8579KoBo7qMGi8EOwd_iGWd_fvcBlwgGURY-cGOd4UgZ_ZdT33NxNgl-k2tWi30SeyEpV0YSZ_&_nc_ht=scontent-lht6-1.xx&oh=0a0416812176e28fb7bf7239ccb9eeea&oe=5D7B6230',
-        paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac eros id lectus scelerisque blandit id ac lorem. Morbi iaculis, tellus ut ultricies pulvinar, ipsum urna euismod turpis, non dapibus dolor nisi a tellus. Morbi lacinia ipsum vitae imperdiet maximus. Proin vel odio dolor. Integer augue enim, pellentesque ut suscipit euismod, vehicula vel urna. Nulla at nisl id urna interdum scelerisque. Etiam pellentesque pulvinar ex et scelerisque.',
+        title: 'Paths',
+        subtitle: 'We provide both residential and commercial services for pathways, we can rejuventate old worn pathways with ease!',
+        imgSrc: require('~/assets/pathway.jpeg'),
+        paragraph: '',
         button: {
           text: 'View Projects',
           to: '/services'
         }
-      }
+      },
+      patios: {
+        title: 'Patios and Garden',
+        subtitle: 'Make sure your garden is in the best shape possible for those summer BBQs and get-togethers! Our bespoke designs will ensure your garden is the topic of conversation!',
+        imgSrc: require('~/assets/garden.jpeg'),
+        paragraph: '',
+        button: {
+          text: 'View Projects',
+          to: '/services'
+        }
+      },
     }
   },
   components: {
@@ -105,7 +112,10 @@ export default {
     VuetifyLogo,
     Card,
     CardTwoCols,
-    CardTwoColsImgRight
+    CardTwoColsImgRight,
+    Carousel,
+    Hero,
+    Quotes
   }
 }
 </script>
@@ -117,8 +127,7 @@ export default {
 #driveway-card, #landscape-card {
   margin-bottom: 50px;
 }
-#quotes {
-  width: 50%;
-  margin: 0 auto;
+#main {
+  margin-top: 10px;
 }
 </style>
