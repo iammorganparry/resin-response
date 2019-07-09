@@ -1,6 +1,6 @@
 <template>
-  <div>
-      <v-card max-height="450">
+  <div class="rounded">
+      <v-card max-height="450" flat>
         <v-img max-height="250" min-height="250" :src="data.imgSrc"/>
         <v-card-title class="headline">
           {{data.title}}
@@ -37,3 +37,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.rounded {
+  border-radius: 20px !important;
+}
+
+.v-card {
+    border-radius: 10px !important;
+}
+</style>

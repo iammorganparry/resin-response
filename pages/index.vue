@@ -12,11 +12,7 @@
       <div class="text-xs-center">
       </div>
      <div class="header-padding">
-      <div style="width: 100%; height: 30px; border-bottom: 1px solid rgba(0,0,0,0.12); text-align: center">
-  <span class="primary--text"  style="font-size: 40px; background-color: white; padding: 0 10px 0 10px;">
-    OUR SERVICES <!--Padding is optional-->
-  </span>
-</div>
+      <Divider dividerText="SERVICES" />
      </div>
      <v-container grid-list-md>
      <v-layout row wrap>
@@ -43,6 +39,9 @@
      <h2 class="text-xs-center">Read What Our Customers Have To Say</h2>
      </div>
     <Quotes />
+    <div class="header-padding">
+    <Divider dividerText="CONTACT US" />
+    </div>
     <ContactForm />
     </v-flex>
   </v-layout>
@@ -60,6 +59,7 @@ import Carousel from '~/components/Carousel.vue'
 import Hero from '~/components/Hero.vue'
 import Quotes from '~/components/Quotes.vue'
 import ContactForm from '~/components/ContactForm.vue'
+import Divider from '~/components/Divider.vue'
 export default {
   data() {
     return {
@@ -107,6 +107,8 @@ export default {
           to: '/services'
         }
       },
+      contactDivider: 'CONTACT US',
+      servicesDivider: 'OUR SERVICES'
     }
   },
   components: {
@@ -118,7 +120,8 @@ export default {
     Carousel,
     Hero,
     Quotes,
-    ContactForm
+    ContactForm,
+    Divider
   }
 }
 </script>
@@ -126,6 +129,7 @@ export default {
 <style>
 .header-padding {
   padding: 50px;
+  margin-bottom: 50px;
 }
 #driveway-card, #landscape-card {
   margin-bottom: 50px;

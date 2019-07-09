@@ -1,8 +1,8 @@
 <template>
   <div id='footer'>
     <v-container>
-      <v-layout>
-        <v-flex xs12 md6 lg6>
+      <v-layout row wrap>
+        <v-flex xs12 md12 lg12 class="text-xs-center">
           <h4>{{footer.contact.title}}</h4>
           <p>T: {{footer.contact.phone}}</p>
           <p>E: {{footer.contact.email}}</p>
@@ -13,10 +13,15 @@
           <p>CUSTOMER COMPLAINTS</p>
           </nuxt-link>
         </v-flex>
-        <v-flex xs12 md6 lg6>
-          {{footer.about}}
+        <v-flex xs12 md12 lg12 class="text-xs-center">
+
+        <span v-for="(item, i) in items" :key="i">
+        <NuxtLink :to="item.to">
+        {{item.title}}
+        </NuxtLink>
+      </span>
         </v-flex>
-          <v-flex xs12>
+          <v-flex xs12 class="text-xs-center">
           {{footer.copy}}
         </v-flex>
       </v-layout>
@@ -28,6 +33,28 @@
 export default {
     data() {
       return {
+           items: [
+        {
+          title: 'Home',
+          to: '/'
+        },
+        {
+          title: 'About',
+          to: '/about'
+        },
+        {
+          title: 'Why Resin?',
+          to: '/switch'
+        },
+        {
+          title: 'Gallery',
+          to: '/gallery'
+        },
+        {
+          title: 'Contact',
+          to: '/contact'
+        }
+      ],
         footer: {
         copy: 'Copyright Resin Response 2019 | Website by MJP Websites Solutions',
         contact: {

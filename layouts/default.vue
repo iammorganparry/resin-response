@@ -12,7 +12,7 @@
       </v-btn>
       <v-spacer />
       <v-toolbar-title>
-        CALL OUR TEAM ON: 07376411844
+        CALL OUR TEAM ON: <span class="primary--text">07376411844</span>
       </v-toolbar-title>
        <v-btn
         icon
