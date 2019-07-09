@@ -1,5 +1,5 @@
 <template>
-  <v-form v-model="valid" method="POST" action="send_mail.php" id="nativeForm">
+  <v-form v-model="valid" method="POST" id="nativeForm">
     <v-container>
       <v-layout row wrap>
         <v-flex
@@ -40,8 +40,9 @@
           ></v-text-field>
           <v-textarea
             placeholder="Enter Message Here"
+            v-model="formBody"
            />
-          <v-btn type="submit" :disabled="!valid">submit</v-btn>
+          <v-btn type="submit" @click="submit" :disabled="!valid">submit</v-btn>
         </v-flex>
       </v-layout>
     </v-container>
@@ -49,11 +50,15 @@
 </template>
 
 <script>
+  import axios from 'axios'
+  axios.defaults.headers.common['Authorization'] = 'Bearer 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';
   export default {
     data: () => ({
       valid: false,
       firstname: '',
       lastname: '',
+      formBody: '',
+      reqUrl: 'https://api.sendgrid.com/v3/mail/send',
       nameRules: [
         v => !!v || 'Name is required',
         v => v.length <= 10 || 'Name must be less than 10 characters'
@@ -65,8 +70,37 @@
       ]
     }),
     methods: {
-          submit() {
-            nativeForm.submit()
+          async submit(e) {
+            e.preventDefault();
+            console.log('Sending')
+            const body = {
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "morgan.parry@cloud-iq.com"
+        }
+      ],
+      "subject": "Hello, World!"
+    }
+  ],
+  "from": {
+    "email": "from_address@example.com"
+  },
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "Hello, World!"
+    }
+  ]
+}
+            // nativeForm.submit()
+            try {
+              const response = axios.post(this.reqUrl,body)
+              console.log(response)
+            } catch (error) {
+              console.log(error)
+            }
           }
         }
   }
