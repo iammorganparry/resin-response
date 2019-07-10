@@ -3,15 +3,19 @@
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 md12 lg12 class="text-xs-center">
-          <h4>{{footer.contact.title}}</h4>
-          <p>T: {{footer.contact.phone}}</p>
-          <p>E: {{footer.contact.email}}</p>
-          <nuxt-link to="/privacy">
+          <!-- <h3 class="contact-title">{{footer.contact.title}}</h3> -->
+          <p><strong>T: {{footer.contact.phone}}</strong></p>
+          <p><strong>E: {{footer.contact.email}}</strong></p>
+          <FacebookButton :data="facebookButton" />
+          <a href="https://twitter.com/ResinResponse" target="_blank">
+          <i class="twitter-icon fa fa-twitter"></i>
+          </a>
+          <!-- <nuxt-link to="/privacy">
           <p>PRIVACY POLICY</p>
           </nuxt-link>
           <nuxt-link to="/complaints">
           <p>CUSTOMER COMPLAINTS</p>
-          </nuxt-link>
+          </nuxt-link> -->
         </v-flex>
         <v-flex xs12 md12 lg12 class="text-xs-center">
 
@@ -24,12 +28,22 @@
           <v-flex xs12 class="text-xs-center">
           {{footer.copy}}
         </v-flex>
+        <v-layout align-center justify-center row fill-height>
+        <v-flex xs3 lg1 md1>
+          <div class="text-xs-center mini-logo">
+              <nuxt-link to="/">
+      <v-img width="75" :src="imageSrc" class='text-xs-center'/>
+      </nuxt-link>
+          </div>
+        </v-flex>
+        </v-layout>
       </v-layout>
     </v-container>
   </div>
 </template>
 
 <script>
+import FacebookButton from '~/components/FacebookButton.vue'
 export default {
     data() {
       return {
@@ -55,6 +69,7 @@ export default {
           to: '/contact'
         }
       ],
+      imageSrc: require('~/assets/logo.jpg'),
         footer: {
         copy: 'Copyright Resin Response 2019 | Website by MJP Websites Solutions',
         contact: {
@@ -68,18 +83,47 @@ export default {
           landscaping: 'Landscaping',
           email: 'resinresponse@hotmail.co.uk'
         },
+      },
+          facebookButton: {
+            url: 'https://www.facebook.com/Resin-Response-749896211720926/'
+          }
       }
-      }
+  },
+  components: {
+    FacebookButton
   }
 }
 </script>
 
 <style scoped>
 #footer {
-  width: 100%
+  width: 100%;
+  align-content: bottom;
 }
-
+#footer p {
+  margin: 0;
+}
 a {
  text-decoration: none;
+}
+.twitter-icon:hover {
+  cursor: pointer;
+}
+.twitter-icon {
+  font-size: 4em;
+  color: #38A1F3;
+}
+
+.contact-title {
+  margin-bottom: 20px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.mini-logo {
+  width: 100%;
+  opacity: 0.5;
 }
 </style>

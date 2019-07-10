@@ -11,14 +11,23 @@
         <v-icon>menu</v-icon>
       </v-btn>
       <v-spacer />
-      <v-toolbar-title>
+      <v-toolbar-title v-if="!isMobile">
         CALL OUR TEAM ON: <span class="primary--text">07376411844</span>
       </v-toolbar-title>
+      <span v-if="isMobile">
        <v-btn
         icon
       >
-        <v-icon>phone</v-icon>
+       <i class="facebook-icon fa fa-facebook-f"></i>
       </v-btn>
+      </span>
+      <span v-else>
+       <v-btn
+        icon
+      >
+      <v-icon>phone</v-icon>
+      </v-btn>
+      </span>
     </v-toolbar>
      <v-navigation-drawer
       v-model="rightDrawer"
@@ -35,11 +44,13 @@
       </v-list>
     </v-navigation-drawer>
     <v-content>
-      <Header />
+      <Header :mobile="isMobile" />
       <!-- <v-container id="main"> -->
         <nuxt />
       <!-- </v-container> -->
     </v-content>
+
+    <PhoneButton :mobile="isMobile" />
     <v-footer
     app
     height="300"
@@ -53,12 +64,14 @@
 <script>
 import Footer from '~/components/Footer.vue'
 import Header from '~/components/Header.vue'
+import PhoneButton from '~/components/PhoneButton.vue'
 export default {
   data() {
     return {
       clipped: false,
       drawer: false,
       fixed: false,
+      isMobile: false,
       items: [
         {
           icon: 'home',
@@ -97,9 +110,25 @@ export default {
         }
       }
     },
+    beforeDestroy () {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.onResize, { passive: true })
+    }
+    },
+
+    mounted () {
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
+    },
+    methods: {
+    onResize () {
+      this.isMobile = window.innerWidth < 600
+    }
+    },
    components: {
     Footer,
-    Header
+    Header,
+    PhoneButton
   }
 }
 </script>
@@ -114,5 +143,9 @@ a {
 }
 .application.theme--light {
   background-color: white !important;
+}
+.facebook-icon {
+  font-size: 2em;
+  color: #3b5998;
 }
 </style>

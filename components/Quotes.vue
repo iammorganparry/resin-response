@@ -53,4 +53,13 @@ export default {
 #quotes-carousel small {
   padding-right: 10px;
 }
+@media only screen and (max-width: 600px) {
+#quotes {
+  width: 90%;
+  margin: 0 auto;
+}
+.blockquote {
+  padding: 16px 0 16px !important;
+}
+}
 </style>

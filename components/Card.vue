@@ -1,10 +1,10 @@
 <template>
-  <div id="opening-card">
+  <div id="opening-card" class="animated fadeIn">
 
-          <h1 class="primary--text text-xs-center">
+          <!-- <h1 class="title primary--text text-xs-center">
           {{data.title}}
-          </h1>
-          <h2 class="text-xs-center">
+          </h1> -->
+          <h2 class="title text-xs-center">
           {{data.subtitle}}
           </h2>
         <v-card-text>
@@ -21,11 +21,11 @@
           <div class="text-xs-center">
           <v-btn
             color="primary"
-
-            nuxt
-            :to="data.button.to"
+            large
           >
+          <a :href="data.button.to">
             {{data.button.text}}
+            </a>
           </v-btn>
           </div>
   </div>
@@ -51,7 +51,7 @@ h1 {
     margin-bottom: 75px;
     width: 50%;
     padding: 50px;
-    background:rgb(255, 255, 255,0.1);
+    background:rgb(255, 255, 255,0.6);
     border-radius: 10px;
     position: absolute;
 }
@@ -63,6 +63,41 @@ h1 {
 
 .sub-offer {
   font-size: 3em;
+}
+#opening-card a {
+  text-decoration: none;
+  color: white;
+}
+
+.title {
+  /* text-shadow: 2px 2px 2px rgb(0,0,0,0.3); */
+  font-weight: 600;
+  font-size: 2em !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+ #opening-card {
+    top: 100px;
+    left: 10%;
+    /* margin-bottom: 75px;  */
+    /* height: 250px; */
+    width: 80%;
+    top: 25%;
+    padding: 30px;
+    background:rgb(255, 255, 255,0.6);
+    border-radius: 10px;
+    position: absolute;
+}
+.offer {
+  font-size: 3em;
+  display: block;
+  font-weight: 600;
+}
+
+.sub-offer {
+  font-size: 1em;
+}
 }
 </style>
 

@@ -2,6 +2,12 @@
   <v-form v-model="valid" method="POST" id="nativeForm">
     <v-container>
       <v-layout row wrap>
+        <v-flex xs12 md6 lg6>
+          <h2>Facebook</h2>
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhttps%3A%2F%2Fwww.facebook.com%2FResin-Response-749896211720926%2F%2F&tabs=messages&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2322334131355709" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </v-flex>
+        <v-flex xs12 md6 lg6>
+        <h2 class='text-xs-center'>Email</h2>
         <v-flex
           xs12
           md12
@@ -44,21 +50,19 @@
            />
           <v-btn type="submit" @click="submit" :disabled="!valid">submit</v-btn>
         </v-flex>
+      </v-flex>
       </v-layout>
     </v-container>
   </v-form>
 </template>
 
 <script>
-  import axios from 'axios'
-  axios.defaults.headers.common['Authorization'] = 'Bearer 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';
   export default {
     data: () => ({
       valid: false,
       firstname: '',
       lastname: '',
       formBody: '',
-      reqUrl: 'https://api.sendgrid.com/v3/mail/send',
       nameRules: [
         v => !!v || 'Name is required',
         v => v.length <= 10 || 'Name must be less than 10 characters'
@@ -70,37 +74,9 @@
       ]
     }),
     methods: {
-          async submit(e) {
-            e.preventDefault();
+          submit(e) {
             console.log('Sending')
-            const body = {
-  "personalizations": [
-    {
-      "to": [
-        {
-          "email": "morgan.parry@cloud-iq.com"
-        }
-      ],
-      "subject": "Hello, World!"
-    }
-  ],
-  "from": {
-    "email": "from_address@example.com"
-  },
-  "content": [
-    {
-      "type": "text/plain",
-      "value": "Hello, World!"
-    }
-  ]
-}
-            // nativeForm.submit()
-            try {
-              const response = axios.post(this.reqUrl,body)
-              console.log(response)
-            } catch (error) {
-              console.log(error)
-            }
+            nativeForm.submit()
           }
         }
   }

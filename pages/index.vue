@@ -42,7 +42,9 @@
     <div class="header-padding">
     <Divider dividerText="CONTACT US" />
     </div>
+    <div id="contact">
     <ContactForm />
+    </div>
     </v-flex>
   </v-layout>
 </v-container>
