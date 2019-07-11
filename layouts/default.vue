@@ -15,11 +15,13 @@
         CALL OUR TEAM ON: <span class="primary--text">07376411844</span>
       </v-toolbar-title>
       <span v-if="isMobile">
+        <a href="https://www.facebook.com/resin.response" target="_blank">
        <v-btn
         icon
       >
        <i class="facebook-icon fa fa-facebook-f"></i>
       </v-btn>
+        </a>
       </span>
       <span v-else>
        <v-btn
@@ -85,7 +87,7 @@ export default {
         },
         {
           icon: 'bubble_chart',
-          title: 'Why Switch?',
+          title: 'Resin Compound',
           to: '/switch'
         },
         {

@@ -10,11 +10,18 @@
       :src="item.src"
     >
      <!-- <v-jumbotron dark> -->
-            <v-container fill-height>
+            <v-container id="text-container" fill-height>
               <v-layout align-center>
                 <v-flex style="background-color:rgba(0, 0, 0, 0.5);">
-                  <h5 color="white" class="display-2 text-xs-center">FIND INSPIRATION IN OUR GALLERY</h5>
-                  <div class="text-xs-center subheading"><v-btn class="text-xs-center">VIEW GALLERY</v-btn></div>
+                  <h5 class="white-text text-xs-center">FIND INSPIRATION IN OUR <span class="gallery-text display-1">GALLERY</span></h5>
+                  <div class="text-xs-center subheading"><v-btn
+                  nuxt
+                  color="primary"
+                  large to='/gallery'
+                  class="text-xs-center">
+                  VIEW GALLERY
+                  </v-btn>
+                  </div>
                 </v-flex>
               </v-layout>
             </v-container>
@@ -39,3 +46,25 @@
     }),
   }
 </script>
+
+<style>
+.white-text {
+  color: white !important;
+}
+
+.gallery-text {
+  display: block;
+}
+
+#text-container {
+  width: 50%;
+  padding: 50px;
+}
+@media only screen and (max-width: 600px) {
+#text-container {
+  width: 100%;
+  padding: 50px;
+}
+}
+
+</style>

@@ -9,7 +9,7 @@
           </h2>
         <v-card-text>
           <div class="text-xs-center">
-          <span class="offer">{{data.offer}}</span>
+          <span class="offer primary--text">{{data.offer}}*</span>
           <span class="sub-offer">{{data.subOffer}}</span>
           </div>
           <p>
@@ -51,7 +51,7 @@ h1 {
     margin-bottom: 75px;
     width: 50%;
     padding: 50px;
-    background:rgb(255, 255, 255,0.6);
+    background:rgb(0 , 0, 0,0.6);
     border-radius: 10px;
     position: absolute;
 }
@@ -62,7 +62,8 @@ h1 {
 }
 
 .sub-offer {
-  font-size: 3em;
+  font-size: 1.5em;
+  color: white !important;
 }
 #opening-card a {
   text-decoration: none;
@@ -73,6 +74,7 @@ h1 {
   /* text-shadow: 2px 2px 2px rgb(0,0,0,0.3); */
   font-weight: 600;
   font-size: 2em !important;
+  color: white;
 }
 
 
@@ -85,7 +87,7 @@ h1 {
     width: 80%;
     top: 25%;
     padding: 30px;
-    background:rgb(255, 255, 255,0.6);
+    background:rgb(0, 0, 0,0.6);
     border-radius: 10px;
     position: absolute;
 }
@@ -97,6 +99,7 @@ h1 {
 
 .sub-offer {
   font-size: 1em;
+  color: white !important;
 }
 }
 </style>

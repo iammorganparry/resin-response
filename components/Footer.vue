@@ -74,7 +74,7 @@ export default {
         copy: 'Copyright Resin Response 2019 | Website by MJP Websites Solutions',
         contact: {
           title: 'Contact Us',
-          phone: '07449857222',
+          phone: '07376411844',
           email: 'resinresponse@hotmail.co.uk'
         },
         services: {

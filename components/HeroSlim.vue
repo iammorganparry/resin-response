@@ -1,22 +1,20 @@
 <template>
 <div id="hero" class="">
-  <v-img class="blur" v-if="isMobile" height="200" :src="src">
-        <div class="title-container">
-    <h1 class="title primary--text">{{title}}</h1>
-      </div>
-  </v-img>
-  <v-img class="blur" v-else height="300" :src="src">
+  <HeroCarousel v-if="isMobile" :title="title" height="300" />
+  <HeroCarousel v-else :title="title" height="400" />
+  <!-- <v-img class="blur" v-else height="350" :src="src">
     <div class="title-container">
     <h1 class="title primary--text">{{title}}</h1>
-    </div>
+    </div> -->
   <!-- <Card :data="about" /> -->
             <!-- <Card :data="about" /> -->
-  </v-img>
+  <!-- </v-img> -->
 </div>
 </template>
 
 <script>
 import Card from '~/components/Card.vue'
+import HeroCarousel from '~/components/HeroCarousel.vue'
 export default {
   props: {
     title: {
@@ -28,7 +26,7 @@ export default {
   },
   data() {
     return {
-        src: require('~/assets/hero.jpg'),
+        src: require('~/assets/hero6.jpeg'),
         about: {
         subtitle: 'Youre No.1 Choice For Driveways, Pathways & Patios',
         offer: '20% OFF!',
@@ -42,7 +40,8 @@ export default {
     }
   },
   components: {
-    Card
+    Card,
+    HeroCarousel
   }
 }
 </script>
@@ -72,17 +71,5 @@ color: white;
 
   border-radius: 0 25px 25px 0;
   height: 100px;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-.title-container {
-  background: rgb(255,255,255,0.5);
-  width: 80%;
-  justify-content: center;
-  display: flex;
-  height: 100px;
-}
 }
 </style>

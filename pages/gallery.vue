@@ -24,7 +24,7 @@ import Divider from '~/components/Divider.vue'
 export default {
   data() {
     return {
-      isMobile: false
+      isMobile: null
     }
   },
    beforeDestroy () {
@@ -51,10 +51,10 @@ export default {
 </script>
 
 <style>
-#gallery {
+/* #gallery {
   margin-top: 75px;
   width: 100%;
   height: 100%;
-}
+} */
 </style>
 

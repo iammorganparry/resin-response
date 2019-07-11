@@ -1,6 +1,6 @@
 <template>
 <div id="why-resin">
-  <HeroSlim title='WHY RESIN?' />
+  <HeroSlim title='RESIN COMPOUND' :isMobile="isMobile" />
   <v-container>
   <v-layout id="resin-intro" align-center row wrap>
     <v-flex xs12 lg6 md6 text-xs-center>
@@ -28,6 +28,7 @@ import HeroSlim from '~/components/HeroSlim.vue'
 export default {
   data() {
     return {
+      isMobile: false,
       satisfactionImg: require('~/assets/satisfaction-label.jpg'),
        resinInfo: [
         {
@@ -69,6 +70,20 @@ export default {
       ]
     }
   },
+   beforeDestroy () {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.onResize, { passive: true })
+    }
+    },
+    mounted () {
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
+    },
+    methods: {
+    onResize () {
+      this.isMobile = window.innerWidth < 600
+    }
+    },
   components: {
     List,
     HeroSlim
@@ -90,7 +105,11 @@ export default {
   margin: 0 auto;
 }
 
-.v-list--three-line .v-list__tile {
-  height: 60px !important;
+@media only screen and (max-width: 600px) {
+
+.satisfaction-image {
+  max-width: 250px;
+  margin: 0 auto;
+}
 }
 </style>
