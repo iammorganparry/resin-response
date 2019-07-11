@@ -1,6 +1,7 @@
 <template>
-<div id="gallery">
+<div>
   <HeroSlim title='GALLERY' :isMobile="isMobile"/>
+<div id="gallery">
   <v-layout row wrap>
     <v-flex text-xs-center>
       <!-- <ContactForm /> -->
@@ -11,6 +12,7 @@
       <ContactForm />
     </v-flex>
   </v-layout>
+</div>
 </div>
 </template>
 

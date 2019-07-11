@@ -24,7 +24,7 @@
               </v-list-tile-avatar>
               <v-list-tile-content class='text-xs-center'>
                 <v-list-tile-title class='text-xs-center' v-html="item.title"></v-list-tile-title>
-                <v-list-tile-sub-title class='text-xs-center' v-html="item.subtitle"></v-list-tile-sub-title>
+                <p class='text-xs-center' v-html="item.subtitle"></p>
               </v-list-tile-content>
             </v-list-tile>
           </template>
@@ -48,5 +48,4 @@ export default {
 </script>
 
 <style>
-
 </style>

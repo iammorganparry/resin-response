@@ -1,10 +1,14 @@
 <template>
-<div id="hero" class="text-xs-center">
-  <v-img v-if="isMobile" height="200" :src="src">
+<div id="hero" class="">
+  <v-img class="blur" v-if="isMobile" height="200" :src="src">
+        <div class="title-container">
     <h1 class="title primary--text">{{title}}</h1>
+      </div>
   </v-img>
-  <v-img v-else height="300" :src="src">
-    <h1 class="primary--text text-xs-center">{{title}}</h1>
+  <v-img class="blur" v-else height="300" :src="src">
+    <div class="title-container">
+    <h1 class="title primary--text">{{title}}</h1>
+    </div>
   <!-- <Card :data="about" /> -->
             <!-- <Card :data="about" /> -->
   </v-img>
@@ -55,6 +59,30 @@ export default {
 
 .title {
 font-size: 3em !important;
-margin-top: 75px;
+/* margin: 125px 0 0 50px; */
+color: white;
+}
+
+.title-container {
+  background: rgb(255,255,255,0.5);
+  width: 30%;
+  justify-content: center;
+  display: flex;
+  margin: 125px 0 0 0;
+
+  border-radius: 0 25px 25px 0;
+  height: 100px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+.title-container {
+  background: rgb(255,255,255,0.5);
+  width: 80%;
+  justify-content: center;
+  display: flex;
+  height: 100px;
+}
 }
 </style>
