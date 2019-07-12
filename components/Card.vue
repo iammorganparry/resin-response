@@ -9,7 +9,7 @@
           </h2>
         <v-card-text>
           <div class="text-xs-center">
-          <span class="offer primary--text">{{data.offer}}*</span>
+          <span class="animated slideIn offer primary--text">{{data.offer}}*</span>
           <span class="sub-offer">{{data.subOffer}}</span>
           </div>
           <p>

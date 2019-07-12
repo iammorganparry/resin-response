@@ -2,7 +2,7 @@
   <v-layout>
     <v-flex xs12 lg12 md12 sm12>
       <v-card flat>
-        <v-container fluid grid-list-lg>
+        <v-container grid-list-lg>
           <v-layout row wrap>
             <v-flex
               v-for="(image,i) in images"
@@ -141,7 +141,7 @@ export default {
     resetModal() {
       return setTimeout(() => {
         this.openImage = false
-      }, 2000);
+      }, 5000);
     }
   },
   components: {

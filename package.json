@@ -1,7 +1,7 @@
 {
   "name": "resin-response",
   "version": "1.0.0",
-  "description": "Website for resin response",
+  "description": "Resinresponse.co.uk is a local business from Nantymoel near Bridgend providing Resin Bound Driveways,Pathways and patios. Our work is SUDS compliant and we can install with a variety of different colours and designs",
   "author": "Morgan Parry",
   "private": true,
   "scripts": {

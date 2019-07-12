@@ -45,6 +45,7 @@ export default {
 <style>
   #about-us {
     margin-top: 100px;
+    margin-bottom: 100px;
   }
   #about-us p {
     font-size: 1.3em;
