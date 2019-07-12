@@ -1,6 +1,6 @@
 <template>
    <div id="quotes">
-    <v-carousel id="quotes-carousel" max="100%" height="200" hide-controls hide-delimiters flat light>
+    <v-carousel id="quotes-carousel" hide-controls hide-delimiters flat light>
       <v-carousel-item
         v-for="(item,i) in items"
         :key="i"
@@ -27,12 +27,8 @@ export default {
           customer: "Colin Bennet"
         },
         {
-          quote: "The guys at Resin Response were amazing! Great job from the whole team!",
-          customer: "Morgan P"
-        },
-        {
-          quote: "Best thing I've had done for my garden thanks Resin Response roll on summer can't wait to get the BBQ out",
-          customer: "Colin Bennet"
+          quote: "Booked to have my drive resurfaced and am extremely pleased with the result. Resin Response - Dan & Scott completed the job within a few days following extensive prep work. The result is outstanding and I thoroughly recommend Resin Response. The team are professional, hard working, prompt and reliable! The price was very competitive too. Thanks lads for a great job 👍🏻",
+          customer: "Gina Thomas"
         },
       ]
     }
@@ -42,24 +38,26 @@ export default {
 
 <style>
 #quotes {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
 }
 #quotes-carousel {
   box-shadow: none;
+  height: 300px !important;
   padding: 10px;
 }
 
 #quotes-carousel small {
   padding-right: 10px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
 #quotes {
   width: 90%;
   margin: 0 auto;
 }
 .blockquote {
   padding: 16px 0 16px !important;
+  font-size: 14px;
 }
 }
 </style>

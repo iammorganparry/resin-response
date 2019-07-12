@@ -30,6 +30,11 @@ module.exports = {
         rel: 'stylesheet',
         href:
           'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css'
+      },
+      {
+        script: [
+          { src: 'https://s.pageclip.co/v1/pageclip.js' }
+        ],
       }
     ]
   },

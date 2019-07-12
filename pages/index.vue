@@ -131,12 +131,19 @@ export default {
 <style>
 .header-padding {
   padding: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 #driveway-card, #landscape-card {
   margin-bottom: 50px;
 }
 #main {
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+  .header-padding {
+  padding: 50px;
+  margin-bottom: 50px;
+}
 }
 </style>

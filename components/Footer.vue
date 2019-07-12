@@ -15,6 +15,7 @@
           </nuxt-link>
           <nuxt-link to="/complaints">
           <p>CUSTOMER COMPLAINTS</p>
+
           </nuxt-link> -->
         </v-flex>
         <v-flex xs12 md12 lg12 class="text-xs-center">
@@ -57,7 +58,7 @@ export default {
           to: '/about'
         },
         {
-          title: 'Why Resin?',
+          title: 'Resin Compound',
           to: '/switch'
         },
         {

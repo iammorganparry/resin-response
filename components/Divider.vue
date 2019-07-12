@@ -26,4 +26,15 @@ export default {
 .divider-text {
   font-size: 40px; background-color: white; padding: 0 10px 0 10px;
 }
+
+
+@media only screen and (max-width: 850px) {
+  .divider-border {
+  width: 100%;
+  height: 25px;
+}
+.divider-text {
+  font-size: 30px; background-color: white; padding: 0 10px 0 10px;
+}
+}
 </style>

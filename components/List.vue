@@ -48,4 +48,16 @@ export default {
 </script>
 
 <style>
+.v-list__tile__title, .v-list__tile__sub-title {
+  overflow: none !important;
+  white-space: pre-line !important;
+  height: auto !important;
+}
+
+
+
+
+.v-list--three-line .v-list__tile  {
+  height: auto !important;
+}
 </style>

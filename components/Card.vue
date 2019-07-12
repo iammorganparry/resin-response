@@ -78,7 +78,7 @@ h1 {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
  #opening-card {
     top: 100px;
     left: 10%;

@@ -72,7 +72,7 @@ color: white;
   height: 100px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
 .title-container {
   background: rgb(255,255,255,0.5);
   width: 100%;

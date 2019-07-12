@@ -1,5 +1,5 @@
 <template>
-  <v-form v-model="valid" method="POST" id="nativeForm">
+  <v-form v-model="valid" method="post" action="https://send.pageclip.co/P6nk7fN2Ew6eHjcC0dFOGaUlvk3w2z7S" id="nativeForm">
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 md6 lg6>
@@ -14,6 +14,7 @@
         >
           <v-text-field
             v-model="firstname"
+            name="firstName"
             :rules="nameRules"
             :counter="10"
             label="First name"
@@ -28,6 +29,7 @@
           <v-text-field
             v-model="lastname"
             :rules="nameRules"
+            name="lastName"
             :counter="10"
             label="Last name"
             required
@@ -42,13 +44,16 @@
             v-model="email"
             :rules="emailRules"
             label="E-mail"
+            name="email"
             required
           ></v-text-field>
           <v-textarea
             placeholder="Enter Message Here"
             v-model="formBody"
+            name="body"
            />
-          <v-btn type="submit" @click="submit" :disabled="!valid">submit</v-btn>
+          <input type="hidden" name="subject" value="Free Quote" />
+          <v-btn type="submit" large color="primary" class="text-xs-center" :disabled="!valid">submit</v-btn>
         </v-flex>
       </v-flex>
       </v-layout>
@@ -74,10 +79,10 @@
       ]
     }),
     methods: {
-          submit(e) {
-            console.log('Sending')
-            nativeForm.submit()
-          }
+        //   submit(e) {
+        //     console.log('Sending')
+        //     nativeForm.submit()
+        //   }
         }
   }
 </script>

@@ -5,7 +5,7 @@
   <v-layout id="resin-intro" align-center row wrap>
     <v-flex xs12 lg6 md6 text-xs-center>
       <h2>Why Choose Resin?</h2>
-       <p>That’s simple; our resin bound systems have the long-term strength and durability of concrete with minimal maintenance. It also has remarkable drainage ability whilst having the appearance of loose gravel, Water drains through the layers of resin to create a puddle free surface that alleviates flood risks. Resin Bound Surfacing binds a range of selective decorative kiln-dried aggregates with a two-part polyurethane resin, providing an attractive porous surface that looks amazing.</p>
+      <p><strong class="secondary--text">Low maintenance</strong>, <strong class="secondary--text">durable</strong> and <strong class="secondary--text">long lasting!</strong> These are just a handful of reasons why you should make the switch to a Resin Bound Drive, Patio or Path. Because resin is extrememly porous you never have to worry about rain forming puddles again. Rain water is naturally drained through the surface alleviating the risk of slipping and flooding! With a vast array of colours and designs to choose from, you can rest assured that the look and feel of your driveway, path or patio will be incredible! Our work is completely SuDS (Sustainable Drainage Systems) compliant, therefore no need for planning permission!</p>
     </v-flex>
     <v-flex xs12 lg6 md6 text-xs-center>
       <div class="text-xs-center"
@@ -14,10 +14,25 @@
       </div>
     </v-flex>
   </v-layout>
+    <div id="benefits">
     <v-flex xs 12>
-    <h2 class="secondary--text text-xs-center">HERE ARE JUST SOME BENEFITS</h2>
-    <List :items="resinInfo" />
+    <h2 class="header-padding secondary--text text-xs-center">HERE ARE JUST SOME BENEFITS</h2>
+    <v-layout row wrap>
+      <v-flex xs12 md6 lg6>
+        <List :items="resinInfo" />
+      </v-flex>
+      <v-flex xs12 md6 lg6>
+        <List :items="resinInfoRight" />
+      </v-flex>
+    </v-layout>
     </v-flex>
+    <v-flex id="resin-contact" xs12>
+      <div class="header-padding">
+      <Divider dividerText="CONTACT US" />
+      </div>
+      <ContactForm />
+    </v-flex>
+    </div>
   </v-container>
 </div>
 </template>
@@ -25,6 +40,8 @@
 <script>
 import List from '~/components/List.vue'
 import HeroSlim from '~/components/HeroSlim.vue'
+import Divider from '~/components/Divider.vue'
+import ContactForm from '~/components/ContactForm.vue'
 export default {
   data() {
     return {
@@ -36,7 +53,7 @@ export default {
           subtitle: ''
         },
         {
-          title: 'No need for planning permission',
+          title: 'No need for planning permission - SuDS Compliant',
           subtitle: ''
         },
         {
@@ -46,8 +63,10 @@ export default {
         {
           title: 'There are <span class="secondary--text">no loose stones</span>',
           subtitle: `- The decorative aggregate cant be scattered or kicked about<br>- We provide a smooth and permanently bound finish`
-        },
-        {
+        }
+      ],
+      resinInfoRight:[
+               {
           title: 'It has a long lifespan as the resin and aggregates are specially selected for durability',
           subtitle: ''
         },
@@ -66,7 +85,7 @@ export default {
         {
           title: 'The finished surface can be used for all kinds of projects',
           subtitle: ''
-        },
+        }
       ]
     }
   },
@@ -81,12 +100,14 @@ export default {
     },
     methods: {
     onResize () {
-      this.isMobile = window.innerWidth < 600
+      this.isMobile = window.innerWidth < 850
     }
     },
   components: {
     List,
-    HeroSlim
+    HeroSlim,
+    Divider,
+    ContactForm
   }
 }
 </script>
@@ -100,9 +121,18 @@ export default {
   padding-top: 75px;
 }
 
+#resin-contact {
+  margin-top: 50px;
+}
+
 .satisfaction-image {
   max-width: 400px;
   margin: 0 auto;
+}
+
+#benefits {
+  margin-top: 75px;
+  margin-bottom: 100px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -7,9 +7,25 @@
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
+        v-if="isMobile"
       >
         <v-icon>menu</v-icon>
       </v-btn>
+      <div v-else id="desktop-nav">
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn
+          flat
+          v-for="item in items"
+          :key="item.title"
+          nuxt
+          :to="item.to">
+          <!-- <v-icon left dark>{{ item.icon }}</v-icon> -->
+          <span class="primary--text">
+          {{ item.title }}
+          </span>
+        </v-btn>
+      </v-toolbar-items>
+      </div>
       <v-spacer />
       <v-toolbar-title v-if="!isMobile">
         CALL OUR TEAM ON: <span class="primary--text">07376411844</span>
@@ -124,7 +140,7 @@ export default {
     },
     methods: {
     onResize () {
-      this.isMobile = window.innerWidth < 600
+      this.isMobile = window.innerWidth < 850
     }
     },
    components: {
@@ -149,5 +165,10 @@ a {
 .facebook-icon {
   font-size: 2em;
   color: #3b5998;
+}
+
+#desktop-nav {
+  margin-left: 200px;
+  height: 100%;
 }
 </style>

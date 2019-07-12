@@ -28,7 +28,7 @@ export default {
   z-index: 3;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
   #header {
   position: fixed;
   top: 0;

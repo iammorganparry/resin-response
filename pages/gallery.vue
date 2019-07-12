@@ -38,7 +38,7 @@ export default {
     },
     methods: {
     onResize () {
-      this.isMobile = window.innerWidth < 600
+      this.isMobile = window.innerWidth < 850
     }
     },
     components: {
