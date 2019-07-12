@@ -7,7 +7,7 @@
             <v-flex
               v-for="(image,i) in images"
               :key="i"
-              xs4
+              xs3
               d-flex
             >
               <v-card flat tile class="d-flex">
@@ -15,6 +15,7 @@
                   :src="image.src"
                   :lazy-src="image.src"
                   aspect-ratio="1"
+                  max-width="300"
                   class="grey lighten-2"
                   @click="openModal(image, !openImage)"
                 >

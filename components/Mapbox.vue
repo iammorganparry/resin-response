@@ -1,7 +1,7 @@
 <template>
   <div id="map">
     <v-img v-if="isMobile" :src="mapSrcMob"/>
-    <v-img v-else :src="mapSrc"/>
+    <v-img v-else :src="mapSrc" height="600"/>
   </div>
 </template>
 
@@ -34,11 +34,12 @@ export default {
 
 <style scoped>
   #map {
+  height: 100%;
   border-bottom: 5px solid #EF5350;
   }
 
   .v-image__image.v-image__image--cover {
-    background-position: top center !important;
+    /* background-position: top top !important; */
   }
 
   @media only screen and (max-width: 850px) {

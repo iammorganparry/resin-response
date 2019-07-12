@@ -2,7 +2,7 @@
   <div>
     <a href="tel:+07376411844" target="" rel="noopener noreferrer">
      <v-btn
-              color="secondary"
+              color="primary"
               dark
               medium
               fixed

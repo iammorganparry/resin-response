@@ -1,6 +1,6 @@
 <template>
   <div id="header" class='animated slideInDown text-xs-center v-toolbar--fixed'>
-    <nuxt-link to="/">
+    <nuxt-link to="/#hero">
     <v-img absolute width="150" :src="imageSrc" class="" />
     </nuxt-link>
   </div>
