@@ -29,6 +29,11 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
+          'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css'
+      },
+      {
+        rel: 'stylesheet',
+        href:
           'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css'
       },
       {

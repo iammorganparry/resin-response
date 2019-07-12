@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-flex xs12 lg12 md12 sm6>
+    <v-flex xs12 lg12 md12 sm12>
       <v-card flat>
         <v-container fluid grid-list-lg>
           <v-layout row wrap>
