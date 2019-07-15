@@ -16,18 +16,21 @@
      </div>
      <v-container grid-list-md>
      <v-layout row wrap>
-      <v-flex xs12 md4 lg4>
+      <v-flex xs12 md6 lg6>
      <div id="driveway-card">
      <CardTwoCols :data="products" />
      </div>
       </v-flex>
-    <v-flex xs12 md4 lg4>
+    <v-flex xs12 md6 lg6>
      <div id="landscape-card">
      <CardTwoCols :data="services" />
      </div>
     </v-flex>
-    <v-flex xs12 md4 lg4>
+    <v-flex xs12 md6 lg6>
      <CardTwoCols :data="patios" />
+    </v-flex>
+    <v-flex xs12 md6 lg6>
+     <CardTwoCols :data="landscaping" />
     </v-flex>
      </v-layout>
      </v-container>
@@ -101,8 +104,18 @@ export default {
       },
       patios: {
         title: 'Patios and Garden',
-        subtitle: 'Make sure your garden is in the best shape possible for those summer BBQs and get-togethers! Our bespoke designs will ensure your garden is the topic of conversation!',
+        subtitle: 'Make sure your garden patio is in the best shape possible for those summer BBQs and get-togethers! Our bespoke designs will ensure your garden is the topic of conversation!',
         imgSrc: require('~/assets/garden.jpeg'),
+        paragraph: '',
+        button: {
+          text: 'View Projects',
+          to: '/services'
+        }
+      },
+      landscaping: {
+        title: 'Landscaping',
+        subtitle: 'Thinking about updating a tired and dated garden or peice of propery? We offer a full range of landscaping services to spruce it up for you!',
+        imgSrc: require('~/assets/landscaping.jpeg'),
         paragraph: '',
         button: {
           text: 'View Projects',
