@@ -17,7 +17,7 @@
                   aspect-ratio="1"
                   max-width="300"
                   class="grey lighten-2"
-                  @click="openModal(image, !openImage)"
+                  @click="openModal(image)"
                 >
             <!-- <ImageModal :image="image" :dialog="openImage" /> -->
                   <template v-slot:placeholder>
@@ -37,12 +37,13 @@
         </v-container>
       </v-card>
     </v-flex>
-    <ImageModal :image="image" :dialog="openImage" />
+    <ImageModal :image="image" :dialog="toggleImage" />
   </v-layout>
 </template>
 
 <script>
 import ImageModal from '~/components/ImageModal.vue'
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -130,13 +131,15 @@ export default {
       ]
     }
   },
+  computed: {
+   toggleImage() {
+     return this.$store.state.toggleImage
+   }
+  },
   methods: {
-    openModal(img, open) {
-      this.resetModal()
-      return (
-        this.image = img,
-        this.openImage = open
-      )
+    openModal(img) {
+      this.$store.dispatch('toggleImage')
+      return this.image = img
     },
     resetModal() {
       return setTimeout(() => {
