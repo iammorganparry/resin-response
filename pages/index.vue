@@ -114,7 +114,7 @@ export default {
       },
       landscaping: {
         title: 'Landscaping',
-        subtitle: 'Thinking about updating a tired and dated garden or peice of propery? We offer a full range of landscaping services to spruce it up for you!',
+        subtitle: 'Thinking about updating a tired and dated garden or peice of propery? We offer a full range of landscaping services to cover your needs!',
         imgSrc: require('~/assets/landscaping.jpeg'),
         paragraph: '',
         button: {
