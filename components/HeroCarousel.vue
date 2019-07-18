@@ -34,16 +34,16 @@ export default {
     return {
       items: [
         {
-          src: require('~/assets/hero7.jpeg'),
+          src: require('~/assets/hero.jpg'),
         },
         {
-          src: require('~/assets/hero4.jpg'),
+          src: require('~/assets/hero7.jpg'),
         },
         {
-          src: require('~/assets/hero5.jpeg'),
+          src: require('~/assets/hero8.jpg'),
         },
         {
-          src: require('~/assets/hero6.jpeg'),
+          src: require('~/assets/hero9.jpg'),
         },
       ]
     }

@@ -15,7 +15,7 @@ export default {
         src: require('~/assets/hero.jpg'),
         about: {
         title: 'Thank you for visiting Resin Response',
-        subtitle: 'Youre No.1 Choice For Driveways, Pathways & Patios',
+        subtitle: "The UK's No.1 Resin Specialist",
         offer: '20% OFF!',
         subOffer: 'ALL WORK',
         paragraph: '',

@@ -76,7 +76,7 @@ export default {
         contact: {
           title: 'Contact Us',
           phone: '07376411844',
-          email: 'resinresponse@hotmail.co.uk'
+          email: 'info@resinresponse.co.uk'
         },
         services: {
           title: 'Services',

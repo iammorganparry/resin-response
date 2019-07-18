@@ -26,6 +26,17 @@
       </v-flex>
     </v-layout>
     </v-flex>
+    <v-flex xs12>
+          <h2 class="header-padding secondary--text text-xs-center">CHOOSE FROM A RANGE OF COLOURS</h2>
+          <v-layout row wrap align-center>
+            <v-flex xs12 md6 lg6>
+              <v-img :src='coloursImg' alt='colour palette'/>
+            </v-flex>
+            <v-flex xs12 md6 lg6>
+              <p class='text-xs-center'>We offer up to 40 stunning colours to choose from! Pick your favourite from our samples or mix and match for that perfect look!</p>
+            </v-flex>
+          </v-layout>
+    </v-flex>
     <v-flex id="resin-contact" xs12>
       <div class="header-padding">
       <Divider dividerText="CONTACT US" />
@@ -47,6 +58,7 @@ export default {
     return {
       isMobile: false,
       satisfactionImg: require('~/assets/satisfaction-label.jpg'),
+      coloursImg: require('~/assets/colors/colour-palette.png'),
        resinInfo: [
         {
           title: 'Non Slip Surface',
@@ -86,7 +98,7 @@ export default {
           title: 'The finished surface can be used for all kinds of projects',
           subtitle: ''
         }
-      ]
+      ],
     }
   },
    beforeDestroy () {

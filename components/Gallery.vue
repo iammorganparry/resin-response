@@ -126,7 +126,43 @@ export default {
           src: require('~/assets/gallery/image29.jpg')
         },
         {
-          src: require('~/assets/gallery/image30.jpg')
+          src: require('~/assets/gallery/20180904_183807_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190314_153404_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190411_105447_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190530_163634_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190530_163703_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190530_163723_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190601_142340_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190601_142340_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190601_142340_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190601_143027_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190707_132316_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190707_132319_resized.jpg')
+        },
+        {
+          src: require('~/assets/gallery/20190707_132327_resized.jpg')
         },
       ]
     }

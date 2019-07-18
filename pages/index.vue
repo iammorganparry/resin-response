@@ -71,15 +71,24 @@ export default {
       items: [
         {
           name: 'Image One',
-          src: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/35416225_115127122722425_4219977128357134336_o.jpg?_nc_cat=103&_nc_oc=AQlGYZF4Rzow04MS569qLXh5bB0lLkG3lJauEfufamWFY2M7CQXpJ_lxJAqdKc8am02HY1CuCVFiYpxiahwb3FIA&_nc_ht=scontent-lht6-1.xx&oh=1da6c4b979d0f7d04a07fc952289cae7&oe=5DAD1269'
+          src: require('~/assets/hero.jpg')
         },
         {
           name: 'Image Two',
-          src: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/54524155_276783313223471_7789933960309506048_o.jpg?_nc_cat=102&_nc_oc=AQlUGVzLz4S13ytXdx4fb2MWlrEbZu8mz6lEXzFZK5G8KL2RLPYdhELhXWyikyR6I6qYGuMIQ7EqslQBeIoDcJlE&_nc_ht=scontent-lht6-1.xx&oh=d235624e18f506b53949c73baff363de&oe=5DC7050C'
+          src: require('~/assets/hero7.jpg')
         },
         {
           name: 'Image Three',
-          src: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/39748512_156856168549520_3251939182565654528_n.jpg?_nc_cat=100&_nc_oc=AQnbFNApRi_3FYyzXiqwiyBTVhfxRNzIACjnOrGqeN4ds4nPYXbegKdD2ers4av9DUtpLZ6d54BF_T9bNoV-LQsU&_nc_ht=scontent-lht6-1.xx&oh=ad00ab687a83f9518243f77415730d44&oe=5DC4B79C'
+          src: require('~/assets/hero8.jpg')
+        },
+        {
+          name: 'Image Four',
+          src: require('~/assets/hero9.jpg')
+        },
+        {
+          name: 'Image Five',
+          src: require('~/assets/hero10.jpg')
+
         }
       ],
       products: {

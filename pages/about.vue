@@ -6,7 +6,7 @@
     <v-flex xs12 text-xs-center>
       <h1>About Us</h1>
       <p>
-        Here at Resin Response we are small local business operating out of Nantymoel, just 15 minutes outside of Bridgend. We cover all of South Wales to provide our customers a quality installation and a Low Maintentance, durable, long-lasting product everytime! Our services cover everything from Resin Bound Drives,Paths and Patios to Landscaping! Contact us for the best quote around!
+        Here at Resin Response we are local business operating out of Bridgend. With over 15 years experience our team cover all of South Wales to provide our customers a quality installation and a Low Maintentance, durable, long-lasting product everytime! Our services cover everything from Resin Bound Drives,Paths and Patios to Landscaping! Contact us for the best quote around!
       </p>
      <div class="header-padding">
       <Divider dividerText="CONTACT US" />
@@ -33,7 +33,6 @@ export default {
       window.removeEventListener('resize', this.onResize, { passive: true })
     }
     },
-
     mounted () {
     this.onResize()
     window.addEventListener('resize', this.onResize, { passive: true })
