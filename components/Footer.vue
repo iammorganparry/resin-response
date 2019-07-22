@@ -72,7 +72,7 @@ export default {
       ],
       imageSrc: require('~/assets/logo.jpg'),
         footer: {
-        copy: 'Copyright Resin Response 2019 | Website by MJP Websites Solutions',
+        copy: 'Copyright Resin Response 2019',
         contact: {
           title: 'Contact Us',
           phone: '07376411844',
@@ -86,7 +86,7 @@ export default {
         },
       },
           facebookButton: {
-            url: 'https://www.facebook.com/Resin-Response-749896211720926/'
+            url: 'https://www.facebook.com/resin.response'
           }
       }
   },

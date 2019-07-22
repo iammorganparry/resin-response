@@ -2,9 +2,10 @@
   <v-form v-model="valid" method="post" action="https://send.pageclip.co/P6nk7fN2Ew6eHjcC0dFOGaUlvk3w2z7S" id="nativeForm">
     <v-container>
       <v-layout row wrap>
-        <v-flex xs12 md6 lg6>
+        <v-flex xs12 md6 lg6 class="text-xs-center">
           <h2>Facebook</h2>
-          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhttps%3A%2F%2Fwww.facebook.com%2FResin-Response-749896211720926%2F%2F&tabs=messages&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2322334131355709" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          <FacebookButton :data="facebookButton" />
+          <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhttps%3A%2F%2Fwww.facebook.com%2Fresin.response%2F%2F&tabs=messages&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2322334131355709" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
         </v-flex>
         <v-flex xs12 md6 lg6>
         <h2 class='text-xs-center'>Email</h2>
@@ -62,8 +63,12 @@
 </template>
 
 <script>
+import FacebookButton from '~/components/FacebookButton'
   export default {
     data: () => ({
+       facebookButton: {
+            url: 'https://www.facebook.com/resin.response'
+          },
       valid: false,
       firstname: '',
       lastname: '',
@@ -83,6 +88,24 @@
         //     console.log('Sending')
         //     nativeForm.submit()
         //   }
+        },
+        components: {
+          FacebookButton
         }
   }
 </script>
+
+
+<style>
+.facebook {
+    -moz-user-select: none;
+    background: #2A49A5;
+    border: 1px solid #082783;
+    box-shadow: 0 1px #4C6BC7 inset;
+    color: white;
+    padding: 3px 5px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #082783;
+    font: 12px Verdana, sans-serif;
+}
+</style>

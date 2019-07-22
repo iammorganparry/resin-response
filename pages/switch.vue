@@ -27,6 +27,19 @@
     </v-layout>
     </v-flex>
     <v-flex xs12>
+          <h2 class="header-padding secondary--text text-xs-center">MAIN ADVANTAGES OF SWITCHING TO A RESIN BOUND SURFACE</h2>
+      <h3 class="secondary--text text-xs-center">Extremely Durable</h3>
+      <p class="text-xs-center">When we install a resin bound surface, we lay it over the existing surface. This means the product becomes EXTREMLY durable. If you're worried about the apperance fading and becoming warn out, no need! Resin is resistant to UV light so it will preserve its appearance for years!</p>
+      <h3 class="secondary--text text-xs-center">Highly Pourous</h3>
+       <p class="text-xs-center">Being highly porous is one of the biggest advantages to a resin bound surface. A porous material means water can drain right through it, alleviating the risk of flooding and slips. Also, if theres any plants near by.. they will still have excellent access to water making this product a excellent choice for any garden patio!</p>
+      <h3 class="secondary--text text-xs-center">Versitile</h3>
+       <p class="text-xs-center">When we say versitile, we dont just mean against general wear and tear! Due to being so porous and slip resistant it makes it an ideal candidate for a range of uses. From access ramps to public footpaths, a resin bound surface is the BEST choice.</p>
+      <h3 class="secondary--text text-xs-center">The Right Look for You</h3>
+       <p class="text-xs-center">With over 40 different colours to choose from, youll be spoilt for choice! Choose your favourite colour or mix and match for that unique look that matches your property. We offer a range of different designs and patterns to give your drive, path or patio that gorgeous appearance it deserves.</p>
+      <h3 class="secondary--text text-xs-center">Little to no maintenance</h3>
+       <p class="text-xs-center">Last but certainly not least is the very minimal maintenance a resin bound surface requires. Weeds stand no chance against it, so all it requires is a clean from time to time to clear any dirt and debris!</p>
+    </v-flex>
+    <v-flex xs12>
           <h2 class="header-padding secondary--text text-xs-center">CHOOSE FROM A RANGE OF COLOURS</h2>
           <v-layout row wrap align-center>
             <v-flex xs12 md6 lg6>
@@ -145,6 +158,10 @@ export default {
 #benefits {
   margin-top: 75px;
   margin-bottom: 100px;
+}
+
+#why-resin h3 {
+  padding: 15px;
 }
 
 @media only screen and (max-width: 600px) {
