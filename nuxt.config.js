@@ -12,7 +12,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { hid: 'keywords', name: 'keywords', content: 'Resin,Compound,Driveways,Paths,Patios,Summer,Resin compound,Compound,Landscaping,Bridgend,Wales,Ogmore Vale,Nantymoel' }
+      { hid: 'keywords', name: 'keywords', content: 'Resin,Resin Response,Response,Seasonal,All Season,Compound,Driveways,Paths,Patios,Summer,Resin compound,Compound,Landscaping,Bridgend,Wales,Ogmore Vale,Nantymoel' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
